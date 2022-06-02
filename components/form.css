@@ -1,0 +1,46 @@
+.form__ {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .form__ {
+        max-width: 500px;        
+    }
+}
+
+.form__title {
+    color: #754CFD;
+    border-left: #754CFD solid 4px;
+    border-right: #754CFD solid 4px;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.form__ label {
+    margin-bottom: 0.3em;
+    margin-top: 0.6em;
+}
+
+.form__ input {
+    height: 4vh;
+    display: block;
+}
+
+.form__ textarea {
+    height: 12vh;
+}
+
+.form__ button {
+    font-family: "Montserrat";
+    font-size: 1em;
+    height: 5vh;
+    background-color:#754CFD;
+    color: white;
+    margin-top: 2em;
+    box-shadow: none;
+    border-width: 0;
+}

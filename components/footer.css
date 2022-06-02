@@ -1,0 +1,57 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 25vh;
+    margin: auto;
+    font-family: 'Courier Prime';
+    color: #B38712;
+    font-size: 1em;
+    padding: 1em;
+
+}
+
+.footer-container > img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-container__title {
+    text-align: center;
+}
+
+
+@media (min-width: 800px) {
+ 
+    .footer-container {
+        height: 18vh;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items:center;
+        font-size: 1em;
+        padding: 0;
+    }
+
+}
+
+
+.footer__container-social { 
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+@media (max-width: 800px) {
+    .footer__container-social {
+        margin-top: 0;
+    }
+}
+
+.footer__container-social > li {
+    margin-bottom: 1em;
+    text-align:center;
+    
+}
