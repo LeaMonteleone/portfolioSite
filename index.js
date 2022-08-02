@@ -1,4 +1,6 @@
-function getData() {
+/* getServicesData fetchs contentful API and returns a new collection width a title, a description and an image url for each object*/
+
+function getServicesData() {
   const url =
     "https://cdn.contentful.com/spaces/30osmkewt5vr/environments/master/entries?access_token=7T-luY0n-JtfH707jCkdX7XMK58poXjn3jjDD-vIgR4&content_type=desafio4";
   return fetch(url)
@@ -6,7 +8,7 @@ function getData() {
     .then((data) => {
       console.log("DATA: ", data);
       const datita = data.items.map((item) => {
-        const imgId = buscarEnAsset(item.fields.img.sys.id, data);
+        const imgId = searchImg(item.fields.img.sys.id, data);
         return {
           img: imgId.fields.file.url,
           title: item.fields.tittle,
@@ -18,13 +20,15 @@ function getData() {
     });
 }
 
-function buscarEnAsset(id, data) {
+function searchImg(id, data) {
   console.log("ID: ", id, "DATA: ", data.includes.Asset);
   const arrayEncontrado = data.includes.Asset.find((asset) => {
     return asset.sys.id == id;
   });
   return arrayEncontrado;
 }
+
+/* This function receives an object width info about services (title, img and description) then makes the template*/
 
 function add(params) {
   const template = document.querySelector(".template");
@@ -37,6 +41,8 @@ function add(params) {
   var clone = document.importNode(template.content, true);
   templateContainer.appendChild(clone);
 }
+
+/* getDataWelcome fetchs contentful API and returns an objet width a title and a description*/
 
 function getDataWelcome() {
   const url =
@@ -56,6 +62,8 @@ function getDataWelcome() {
     });
 }
 
+/*Function to add welcome data */
+
 function AddWelcome(params) {
   const title = document.querySelector(".info__title");
   const description = document.querySelector(".info__text");
@@ -63,16 +71,17 @@ function AddWelcome(params) {
   description.textContent = params.description;
 }
 
+/*Main function calls header, footer and the form components. It also calls getData functions then itarates its arguments and for each element
+execute Add functions  */
 function main() {
   const header__menu = document.querySelector(".header-menu");
   header(header__menu);
   const footer__section = document.querySelector(".footer__section");
   footer(footer__section);
   const formContainer = document.querySelector(".form__section");
-
   formComponent(formContainer);
 
-  getData().then((info) => {
+  getServicesData().then((info) => {
     for (let r of info) {
       add(r);
     }

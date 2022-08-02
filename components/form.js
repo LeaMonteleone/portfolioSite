@@ -1,3 +1,5 @@
+/*Header component receive a container by argument and appends a div width all the form's html.*/
+
 function formComponent(el) {
   const componentEl = document.createElement("div");
   componentEl.innerHTML = `
@@ -18,9 +20,11 @@ function formComponent(el) {
 
   el.appendChild(componentEl);
 
-  const formu = componentEl.querySelector(".form__");
+  /* Logic to make the form works: When submited, returns and objet width all the info, then fetchs vercel api, post the objecta and vercel 
+  makes it works*/
+  const formOk = componentEl.querySelector(".form__");
 
-  formu.addEventListener("submit", (event) => {
+  formOk.addEventListener("submit", (event) => {
     event.preventDefault();
     const msj = {
       to: "monteleonelea@gmail.com",

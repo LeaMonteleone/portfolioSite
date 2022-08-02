@@ -1,3 +1,4 @@
+/**/
 function header(el) {
   const componentEl = document.createElement("div");
   componentEl.className = "header-section";
@@ -29,17 +30,6 @@ function header(el) {
   </nav>
 </div>`;
 
-  function logo() {
-    const logoContainer = componentEl.querySelector(".header-menu__logo");
-
-    if (window.innerWidth > 800) {
-      logoContainer.setAttribute("src", "./img/lean-logo-ok.svg");
-    } else {
-      logoContainer.setAttribute("src", "./img/lean-logo-mobile-ok.svg");
-    }
-  }
-
-  logo();
   const barsMenu = componentEl.querySelector("#barsButton");
   const windowMobile = componentEl.querySelector(".mobile-header__window");
   const exit = componentEl.querySelector(".mobile-header__window__menu__close");
@@ -53,4 +43,16 @@ function header(el) {
   });
 
   el.appendChild(componentEl);
+
+  /*Logo function changes the logo depending on whether it's mobile or 800px > screen */
+  function logo() {
+    const logoContainer = componentEl.querySelector(".header-menu__logo");
+
+    if (window.innerWidth > 800) {
+      logoContainer.setAttribute("src", "./img/lean-logo-ok.svg");
+    } else {
+      logoContainer.setAttribute("src", "./img/lean-logo-mobile-ok.svg");
+    }
+  }
+  logo();
 }

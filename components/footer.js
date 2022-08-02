@@ -1,3 +1,5 @@
+/*Header component receive a container by argument and appends a div width all the footer's html*/
+
 function footer(el) {
   const componentEl = document.createElement("div");
   componentEl.innerHTML = `  
