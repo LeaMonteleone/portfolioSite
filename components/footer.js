@@ -9,9 +9,9 @@ function footer(el) {
     <img src="./img/arrows.svg">
     
     <ul class="footer__container-social">
-        <li>Instagram <i class="fa-brands fa-instagram"></i></li>
-        <li>Linkedin <i class="fa-brands fa-linkedin"></i></li>
-        <li>Github <i class="fa-brands fa-github"></i></li>
+        <li> <a href="">Instagram <i class="fa-brands fa-instagram"></i> </a></li>
+        <li> <a href="https://www.linkedin.com/in/leandro-monteleone" target="_blank">Linkedin <i class="fa-brands fa-linkedin"></i> </a>< </li>
+        <li> <a href="https://github.com/LeaMonteleone" target="_blank"> Github <i class="fa-brands fa-github"></i> </a>< </li>
 
     </ul>
     </div>`;

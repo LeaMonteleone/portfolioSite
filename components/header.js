@@ -1,5 +1,6 @@
 /*Header component receive a container by argument and appends a div width all the header's html.
 It also has the logic of the mobile menu*/
+
 function header(el) {
   const componentEl = document.createElement("div");
   componentEl.className = "header-section";
