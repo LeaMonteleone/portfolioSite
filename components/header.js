@@ -1,4 +1,5 @@
-/**/
+/*Header component receive a container by argument and appends a div width all the header's html.
+It also has the logic of the mobile menu*/
 function header(el) {
   const componentEl = document.createElement("div");
   componentEl.className = "header-section";
@@ -14,7 +15,7 @@ function header(el) {
       <ul class="mobile-header__window__menu">
           <li><a href="./portfolio.html">Portfolio</a></li>
           <li><a href="./services.html">Servicios</a></li>
-          <li><a href="./contacto/contact.html">Contacto</a></li>
+          <li><a href="./contact.html">Contacto</a></li>
       </ul>
 
       <i class="fa-solid fa-xmark fa-2xl mobile-header__window__menu__close"></i>
