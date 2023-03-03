@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--Componentens-->
-    <script defer src="./components/footer.js"></script>   
+    <script defer src="./components/footer.js"></script>
     <script defer src="./components/header.js"></script>
     <script defer src="./components/form.js"></script>
 
-
     <!--Components styles-->
-    <link rel="stylesheet" href="./components/header.css">
-    <link rel="stylesheet" href="./components/footer.css">
-    <link rel="stylesheet" href="./components/form.css">
+    <link rel="stylesheet" href="./components/header.css" />
+    <link rel="stylesheet" href="./components/footer.css" />
+    <link rel="stylesheet" href="./components/form.css" />
 
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">   
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!--Icons Font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!--Js y Css index-->
     <script defer src="./index.js"></script>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
 
-    <title>Leandro Monteleone Portfolio site </title>
-</head>
+    <title>Leandro Monteleone Portfolio site</title>
+  </head>
 
-<body>
+  <body>
     <header class="header-menu"></header>
 
-
     <main>
-        <!--Hero Section-->
-        <section class="hero-section">
-            <h1 class="hero-section__title">¡HOLA!</h1>
-            <h2 class="hero-section__subtitle">Soy Leandro Monteleone</h2>
-            <p>Desarrollador frontend junior</p>
-        </section>
+      <!--Hero Section-->
+      <section class="hero-section">
+        <h1 class="hero-section__title">¡HOLA!</h1>
+        <h2 class="hero-section__subtitle">Soy Leandro Monteleone</h2>
+        <p>Desarrollador web</p>
+      </section>
 
-        <!-- Info about me section. Data is fetched from Contenful CMS-->
-        <section class="info section">
-            <div class="info__img-container">
-                <img class="info__img" src="./img/img1.png" alt="">
-            </div>
-            <div class="info__text-container">
-                <h2 class="info__title"></h2>
-                <p class="info__text"></p>  
-            </div> 
-        </section>
+      <!-- Info about me section. Data is fetched from Contenful CMS-->
+      <section class="info section">
+        <div class="info__img-container">
+          <img class="info__img" src="./img/img1.png" alt="" />
+        </div>
+        <div class="info__text-container">
+          <h2 class="info__title"></h2>
+          <p class="info__text"></p>
+        </div>
+      </section>
 
-        <!-- Services are fetched from Contentful CMS-->
-        <section class="services">
-            <div class="section services__section">    
-                <h2 class="services-title">Mis Servicios</h2>
-                <ul class="template-container">
+      <!-- Services are fetched from Contentful CMS-->
+      <section class="services">
+        <div class="section services__section">
+          <h2 class="services-title">Mis Servicios</h2>
+          <ul class="template-container">
+            <!-- <Li> template start-->
+            <template class="template">
+              <li>
+                <div class="template__img-container">
+                  <img class="services__img" src="" />
+                </div>
+                <h3 class="services__title"></h3>
+                <p class="services__text"></p>
+              </li>
+            </template>
+            <!-- Template end-->
+          </ul>
+        </div>
+      </section>
 
-                    <!-- <Li> template start-->
-                    <template class="template">
-                        <li>
-                            <div class="template__img-container">
-                                <img class="services__img" src="">
-                            </div>
-                            <h3 class="services__title"></h3>
-                            <p class="services__text"></p>
-                        </li>
-                    </template>
-                    <!-- Template end-->
-                </ul>
-            </div>
-        </section>
-        
-        <!-- Contact form-->
-        <section class="form__section section"></section>
-
+      <!-- Contact form-->
+      <section class="form__section section"></section>
     </main>
 
     <!-- Footer section-->
     <footer class="footer__section"></footer>
-    
-</body>
+  </body>
 </html>
